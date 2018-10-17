@@ -3,8 +3,9 @@ from flask import Flask, request, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return 'Home page'
+@app.route('/<user>')
+def index(user=None):
+    return render_template("user.html", user=user)
 
 @app.route('/cat')
 def cat():
