@@ -40,4 +40,4 @@ def shopping():
     return render_template("shopping.html", food=food)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port='80')
